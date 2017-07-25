@@ -1,0 +1,21 @@
+nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
+    button.navbar-toggler.hidden-md-up.pull.xs-right(type='button', data-toggle='collapse', data-target='#navbar') &#x2630;
+    #navbar.navbar-nav.collapse.navbar-toggleable-sm
+        .container
+            a.navbar-brand(href='/')
+                i.icn-logo.material-icons filter_list 
+                | CDA | Complete Dominance Athletics 
+            .nav-items.clearfix
+                if(!currentUser)
+                    a.nav-item.nav-link(href='signup') Sign Up
+
+                a.nav-item.nav-link(href='about') About
+                a.nav-item.nav-link(href='contact') Contact
+                a.nav-item.nav-link(href='profile') My Profile
+                a.nav-item.nav-link(href='shop') Shop
+            if(currentUser)
+                div
+                    img.avatar.img-circle.hidden-xs-down(src='./assets/img/avatar.png')
+                    a.btn.btn-light.pull-md-righ(href='logout') Log Out
+            else        
+                a.btn.btn-info-outline.btn-lg.pull-md-right(href='login') Login

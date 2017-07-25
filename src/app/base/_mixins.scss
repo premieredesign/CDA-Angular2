@@ -1,0 +1,387 @@
+//===============================================================================================
+
+
+////////////////
+// Web Fonts ///
+////////////////
+
+@mixin font-face($family, $file) {
+	@font-face {
+    font-family: $family;
+    src: url('#{$path-font}/#{$file}-webfont.eot');
+    src: url('#{$path-font}/#{$file}-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path-font}/#{$file}-webfont.woff') format('woff'),
+         url('#{$path-font}/#{$file}-webfont.ttf') format('truetype');
+	}
+}
+
+
+
+
+
+//===============================================================================================
+
+
+//////////////////////
+// Picture patches ///
+//////////////////////
+
+@mixin picture($attch, $w, $h, $mt) {
+	background-attachment: $attch;
+	width: $w;
+	height: $h;
+	z-index: 200;
+	margin-top: $mt;
+}
+
+
+//===============================================================================================
+
+
+/////////////////
+// Cover Vid //////
+/////////////////
+
+@mixin cover($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+
+//===============================================================================================
+
+
+/////////////////
+// Youtube //////
+/////////////////
+
+@mixin tube($p,$l,$r,$br) {
+	position: $p;
+	left: $l;
+	right: $r;
+	border-radius: $br;
+}
+
+@mixin tube-all($m, $br, $w) {
+	margin: $m;
+	border-radius: $br;
+	width: $w;
+}
+
+@mixin frame($w, $h) {
+	width: $w;
+	height: $h;
+}
+
+
+//============================================================================================
+
+
+//////////////////
+// Nav patches ///
+//////////////////
+
+@mixin navbar-nav($pl,$pr,$fl,$m,$w,$fo) {
+	padding-left: $pl;
+	padding-right: $pr;
+	float: $fl;
+	margin: $m;
+	width: $w;
+	font-size: $fo;
+}
+
+
+//============================================================================================
+
+
+/////////////////
+// Jumbotrons ///
+/////////////////
+
+@mixin jumbo($c,$p,$pb,$w,$b) {
+	color: $c;
+	padding-top: $p;
+	padding-bottom: $pb;
+	width: $w;
+	border-radius: $b;
+}
+
+@mixin jumbo-1($c,$p,$w,$h,$b) {
+	color: $c;
+	padding-top: $p;
+	width: $w;
+	height: $h;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-radius: $b;
+}
+
+
+@mixin jumbo-2($c,$p,$pb,$b,$fixed) {
+	color: $c;
+	padding-top: $p;
+	padding-bottom: $pb;
+	padding-left: 0px;
+	padding-right: 0px;
+	border-radius: $b;
+	background-attachment: $fixed;
+	z-index: 200;
+}
+
+//======================================
+
+
+
+
+
+
+//===============================================================================================
+
+
+/////////////////
+// Image Path ///
+/////////////////
+
+
+@mixin bg-image($image, $ext, $center, $cover, $w, $h,$ba) {
+	background-image: url("../img/#{$image}.#{$ext}");
+	background-repeat: no-repeat;
+	background-position: $center;
+	background-size: $cover;
+	width: $w;
+	height: $h;
+	background-attachment: $ba
+}
+
+
+
+
+//============================================================================================
+
+
+/////////////
+// Footer ///
+/////////////
+
+@mixin foot($m, $f) {
+	margin: 0;
+	margin-left: $m;
+	font-size: $f;
+}
+
+
+
+
+
+
+
+//============================================================================================
+
+
+///////////
+// Text ///
+//////////
+
+
+@mixin text($c, $f, $t, $p) {
+	color: $c;
+	font-size: $f;
+	text-align: $t;
+	padding-left: $p;
+}
+
+
+
+
+
+//===============================================================================================
+
+
+////////////////
+// Keyframes ///
+////////////////
+
+
+@mixin op($op-light, $op-full) {
+	@-webkit-keyframes op {
+		0% { opacity: $op-light; }
+		100% { opacity: $op-full; }
+	}
+}
+
+@mixin nav($nav-short, $nav-tall) {
+	@-webkit-keyframes nav {
+		0% { height: $nav-short; }
+		100% { height: $nav-tall; }
+	}
+}
+
+
+
+
+
+
+
+
+
+//===============================================================================================
+
+
+///////////////////
+// Css Defaults ///
+///////////////////
+
+
+@mixin nav-hover($color) {
+	color: $color;
+}
+
+@mixin body-default {
+	background-color: $biscay;
+  	color: $white;
+  	background-position: bottom center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	z-index: -8000;
+  	width: auto !important;
+  	height: auto !important;
+  	overflow-x: hidden;
+  	-webkit-font-smoothing: antialiased;
+}
+
+
+
+
+
+//===============================================================================================
+
+
+////////////////////
+// Media Queries ///
+////////////////////
+
+
+//-------------------------For Mobile-----------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@mixin h2-mq($display) {
+	@media all and (max-width: $media-wide) {
+		.h2-change {
+			display: $display !important;
+		}
+	}
+}
+
+//----------------------For index pic--------------------------------------
+@mixin index-pic($margin, $padding) {
+	margin-right: $margin;
+	padding-top: $padding;
+	margin: 0;
+}
+
+
+
+
+
+
+
+//----------------------For all h-1--------------------------------------
+@mixin h-1($t,$r,$l,$w,$f) {
+	top: $t;
+	right: $r;
+	left: $l;
+  	position: absolute;
+  	width: $w;
+  	font-weight: 700;
+  	font-size: $f;
+  	text-align: center;
+  	height: 120px;
+  	line-height: 1;
+  	margin: auto;
+  	color: #fff;
+  	opacity: .4;
+}
+
+
+
+
+
+
+//----------------------For all h-2--------------------------------------
+@mixin wide($color) {
+	line-height: 9;
+	font-size: 16px;
+	margin-left: 200px;
+}
+
+@mixin narrow($display) {
+	line-height: 17;
+	font-size: 9px;
+	margin-left: 350px;
+}
+
+@mixin h-2($l,$f,$m) {
+	line-height: $l;
+	font-size: $f;
+	margin-left: $m;
+}
+
+@mixin h2-change($lh, $f, $c, $ml) {
+	line-height: $lh;
+	font-size: $f;
+	color: $c;
+	margin-left: $ml;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1;
+	opacity: .3;
+}
+
+//----------------------For all h-3-4-5--------------------------------------
+@mixin h-3-4-5($w, $f, $m, $c, $t) {
+	width: $w;
+	font-size: $f;
+	margin-left: $m;
+	color: $c;
+	text-align: $t;
+}
+
+//-----------------------------------------------------------
+
+@mixin media-large($size) {
+	@media all and (min-width: $media-narrow) {
+		letter-spacing: $size;
+	}
+}
+
+@mixin media-medium($size) {
+	@media all and (max-width: $media-wide) {
+		padding-left: $size;
+	}
+}
+
+@mixin media-wide($val) {
+	@media all and (max-width: $media-wide) {
+		display: $val;
+	}
+}
+
+
+
+

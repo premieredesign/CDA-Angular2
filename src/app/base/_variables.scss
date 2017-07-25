@@ -1,0 +1,106 @@
+//===============================================================================================
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
+
+// Descriptive Color variables //
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
+
+
+$white          : #fff;
+$black          : #000;
+$grey           : #878787;
+$gray			: #818181;
+$silver			: #bbb;
+$regent-st-blue : #add8e6;
+$river-bed      : #48525c;
+$yellow-orange  : #ffa949;
+$clairvoyant	: #350854;
+$violet			: #12051a;
+$biscay			: #091c29;
+$tundora		: #414141;
+$orange 		: #feb645;
+$hot-toddy		: #C77D0A;
+$science-blue	: #0A59C7;
+
+//===============================================================================================
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@//
+
+// Media Query Breakpoints //
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@//
+
+$media-16			: '(max-width: 1680px)'; 
+$media-14			: '(max-width: 1440px)';
+$media-13			: '(max-width: 1366px)'; 
+$media-12			: '(max-width: 1280px)'; 
+$media-10 			: '(max-width: 1024px)'; 
+$media-76			: '(max-width: 768px)';
+$media-72			: '(max-width: 720px)';
+$media-73			: '(max-width: 736px)';
+$media-mobile-56	: '(max-width: 568px)';
+$media-mobile-50	: '(max-width: 500px)';
+$media-mobile-42	: '(max-width: 425px)';
+$media-mobile-38	: '(max-width: 380px)';
+$media-mobile-36	: '(max-width: 360px)';
+$media-mobile-32	: '(max-width: 320px)';
+
+
+//===============================================================================================
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@//
+
+// Functional color variables //
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@//
+
+
+$color-prim     	: $yellow-orange;   // first define the generic term they all have in common:: next make a specific description like primary or secondary
+$color-sec      	: $river-bed;
+
+$color-text-light   : $white;
+$color-text-base	: $grey;
+$color-text-dark    : $river-bed;
+
+$color-link-default : $yellow-orange;
+$color-link-visited : $regent-st-blue;
+
+$color-shadow       : rgba($black,.8);
+$color-body         : $white;
+
+
+
+//===============================================================================================
+
+//@@@@@@@@@@@@@//
+
+// Font Stacks //
+
+//@@@@@@@@@@@@@//
+
+$stack-sans-serif	: Helvetica, Arial, sans-serif;
+$stack-helvetica	: "Helvetica Neue", $stack-sans-serif;
+$stack-abolition	: 'Abolition Regular', $stack-sans-serif;
+
+// Border radius
+
+$br 	: 10px;
+
+
+
+//===============================================================================================
+
+//@@@@@@@@@@@@//
+//Asset Paths //
+//@@@@@@@@@@@@//
+
+$path-img	: '../img'; 
+$path-font	: '../fonts';
+$river-path : '..img/river.jpeg';
+
+
+
+
+
+
